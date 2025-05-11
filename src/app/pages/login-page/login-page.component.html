@@ -1,0 +1,22 @@
+<form
+  class="login-form"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()">
+  <h1 class="h1 mb60">Вход</h1>
+
+  <label class="lycoris-control-label mb16">
+    Login
+    <input
+      formControlName="login"
+      class="lycoris-input" type="text" placeholder="Введите логин">
+  </label>
+
+  <label class="lycoris-control-label mb32">
+    Password
+    <input
+      formControlName="password"
+      class="lycoris-input" type="text" placeholder="Введите пароль">
+  </label>
+
+  <button class="btn btn-shadow" type="submit">Войти</button>
+</form>

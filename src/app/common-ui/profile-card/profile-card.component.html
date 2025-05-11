@@ -1,0 +1,24 @@
+@if (profile){
+  <div  class="profile-card">
+    <div class="avatar-name">
+      <img
+        [src]= "imageUrl"
+        [alt]="profile.imageId"
+        class="profile-card__avatar" >
+      <div class="profile-card__name">
+        <strong class="h6">{{ profile.firstName }} {{ profile.lastName }}</strong>
+        <span class="subtitle"> {{ profile.login }}</span>
+      </div>
+    </div>
+
+    <div class="profile-card__information">
+      <div class="profile-enum">Status: <p class="profile-info">{{ profile.status }}</p></div>
+      <div class="profile-enum">Gender: <p class="profile-info">{{ profile.gender }}</p></div>
+      <div class="profile-enum">Department: <p class="profile-info">{{ profile.department }}</p></div>
+    </div>
+
+    <div class="profile-card__action-btns">
+      <button class="btn" type="button">Подробнее</button>
+    </div>
+  </div>
+}

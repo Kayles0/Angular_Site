@@ -5,7 +5,12 @@
   "projects": {
     "AngularTEST": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -92,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c88342b0-60ee-46b2-8d33-575f25868ec1"
   }
 }

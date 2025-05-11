@@ -1,1 +1,115 @@
-/* You can add global styles to this file, and also import other style files */
+@import "fonts.scss";
+@import "margins.scss";
+
+:root {
+  --dark-color: #000000;
+  --light-color: #FFFFFF;
+  --red-color: #bb0404;
+  --primary-color: #8636ff;
+  --green-color: #164816;
+  --gray-color: #595151;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "JetBrains Mono", sans-serif;
+  background: var(--dark-color);
+  color: var(--light-color);
+  background-image: url(/assets/imgs/background.jpg);
+  background-attachment: fixed;
+  background-position: right bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.profile-info {
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--red-color);
+  color: var(--red-color);
+  display: inline-table;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 6px;
+}
+
+.profile-enum {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.btn {
+  width: 100%;
+  background: var(--primary-color);
+  color: var(--dark-color);
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  border: 1px solid var(--dark-color);
+}
+
+.h1 {
+  font-size: 40px;
+  line-height: 56px;
+  font-weight: 800;
+}
+
+.h6 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.lycoris-control-label {
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.lycoris-input {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--light-color);
+  border-radius: 12px;
+  padding: 12px 20px;
+  background: var(--dark-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "JetBrains Mono", sans-serif;
+  color: var(--light-color);
+}
+
+.btn-shadow {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: -3px;
+    right: -3px;
+    background: var(--gray-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+}
