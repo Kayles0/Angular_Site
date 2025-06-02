@@ -1,0 +1,101 @@
+:host {
+  display: block;
+  padding: 20px 12px;
+  position: fixed;
+  width: 300px;
+  height: 100dvh;
+  background: var(--dark-hover-color);
+}
+
+.lycoris-icon {
+  max-width: 60px;
+  max-height: 100%;
+  cursor: pointer;
+}
+
+.main-menu-list {
+  display: grid;
+  grid-gap: 8px;
+  list-style: none;
+}
+
+.menu-item {
+  padding: 16px 12px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--light-color);
+  display: grid;
+  grid-template-columns: 16px 1fr max-content;
+  align-items: center;
+  grid-gap: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  width: 100%;
+  text-align: left;
+  border-radius: 2px;
+
+  &.active,
+  &:hover,
+  &:focus-visible {
+    background: var(--dark-color);
+    color: var(--red-color);
+
+    .menu-icon {
+      color: var(--red-color);
+    }
+  }
+}
+
+.menu-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  color: var(--light-color);
+}
+
+.sidebar-me {
+  position: absolute;
+  width: calc(100% - 20px);
+  bottom: 10px;
+  background: var(--dark-color);
+  border-radius: 2px;
+  padding: 4px 16px;
+  display: grid;
+  grid-template-columns: 32px 1fr 30px;
+  grid-gap: 26px;
+  align-items: center;
+}
+
+.sidebar-me_avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.username-text {
+  font-weight: 700;
+  color: var(--red-color);
+}
+
+.settings-btn {
+  svg {
+    width: 13px;
+    height: 13px;
+    color: var(--red-color);
+  }
+}
+
+.logout-btn {
+  svg {
+    width: 20px;
+    height: 20px;
+    color: var(--red-color);
+  }
+}
+
+.sidebar-me__buttons {
+  display: inline-flex;
+  gap: 6px;
+}

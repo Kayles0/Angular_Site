@@ -2,7 +2,7 @@
   <div  class="profile-card">
     <div class="avatar-name">
       <img
-        [src]= "imageUrl"
+        [src]= "profile.imageUrl"
         [alt]="profile.imageId"
         class="profile-card__avatar" >
       <div class="profile-card__name">
@@ -18,7 +18,7 @@
     </div>
 
     <div class="profile-card__action-btns">
-      <button class="btn" type="button">Подробнее</button>
+      <button class="btn" type="button" [routerLink]="['/profile/', profile.id]">Подробнее</button>
     </div>
   </div>
 }

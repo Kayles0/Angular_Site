@@ -1,0 +1,40 @@
+.profile-page_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.to-settings-btn {
+  width: 200px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.to-settings-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--dark-color);
+}
+
+.profile-page__body {
+  display: grid;
+  padding: 50px;
+  grid-gap: 32px;
+  grid-template-columns: 1fr;
+  border: 2px solid var(--red-color);
+  border-radius: 30px;
+}
+
+.profile-page__element {
+  display: flex;
+  color: var(--light-red-color);
+}
+
+.profile-page__info {
+  color: var(--light-color);
+  border: 1px solid var(--red-color);
+  border-radius: 10px;
+  padding: 6px 10px;
+}

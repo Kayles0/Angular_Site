@@ -1,18 +1,17 @@
 import {Component, inject, signal} from '@angular/core';
-import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {AuthService} from '../../auth/auth.service';
-import {Router, RouterLink} from '@angular/router';
+import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-login-page',
-  imports: [
-    ReactiveFormsModule,
-    RouterLink
-  ],
-  templateUrl: './login-page.component.html',
-  styleUrl: './login-page.component.scss'
+  selector: 'app-register-page',
+    imports: [
+        ReactiveFormsModule
+    ],
+  templateUrl: './register-page.component.html',
+  styleUrl: './register-page.component.scss'
 })
-export class LoginPageComponent {
+export class RegisterPageComponent {
   authService = inject(AuthService);
   router = inject(Router);
 
@@ -26,7 +25,7 @@ export class LoginPageComponent {
   onSubmit() {
     if (this.form.valid){
       //@ts-ignore
-      this.authService.login(this.form.value)
+      this.authService.register(this.form.value)
         .subscribe(res => {
           this.router.navigate([''])
         });

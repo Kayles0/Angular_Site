@@ -1,32 +1,40 @@
 export interface Profile {
   id: number;
   login: string;
-  gender: Gender;
+  gender: Gender | string;
   firstName: string;
   lastName: string;
   email: string;
-  status: Status;
-  department: Department;
+  status: Status | string;
+  department: Department | string;
   imageId: number;
+  imageUrl?: string;
+  groups: Groups[];
 }
 
 export enum Gender {
-  MAN = 'MAN',
-  'WOMAN' = 'WOMAN'
+  Male = 'MAN',
+  Female = 'WOMAN'
+}
+
+export interface Groups {
+  name: string;
 }
 
 export enum Status {
   ACTIVE = 'ACTIVE',
-  INACTIVE = 'INACTIVE',
-  PENDING = 'PENDING'
+  ON_VACATION = 'ON_VACATION',
+  DISMISSED = 'DISMISSED',
+  ON_PROBATION = 'ON_PROBATION',
+  INTERN = 'INTERN'
 }
 
 export enum Department {
-  SOFTWARE_DEVELOPMENT_DEPARTMENT,
-  QUALITY_ASSURANCE_DEPARTMENT,
-  DEVOPS_DEPARTMENT,
-  SUPPORT_AND_OPERATIONS_DEPARTMENT,
-  MOBILE_DEVELOPMENT_DEPARTMENT
+  Software_Development = 'SOFTWARE_DEVELOPMENT_DEPARTMENT',
+  Quality_Assurance = 'QUALITY_ASSURANCE_DEPARTMENT',
+  DevOps = 'DEVOPS_DEPARTMENT',
+  Support_Operations = 'SUPPORT_AND_OPERATIONS_DEPARTMENT',
+  Mobile_Development = 'MOBILE_DEVELOPMENT_DEPARTMENT'
 }
 
 

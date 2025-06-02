@@ -1,0 +1,67 @@
+<app-profile-header
+></app-profile-header>
+
+<form class="settings-form" [formGroup]="form">
+  <label class="lycoris-form-label">
+    <span class="lycoris-form-label__text"> Аватар </span>
+    <app-avatar-upload></app-avatar-upload>
+  </label>
+
+  <div  class="two-columns">
+    <label class="lycoris-form-label">
+      <span class="lycoris-form-label__text"> Имя </span>
+      <input type="text" class="lycoris-form-input" formControlName="firstName">
+    </label>
+
+    <label class="lycoris-form-label">
+      <span class="lycoris-form-label__text"> Фамилия </span>
+      <input type="text" class="lycoris-form-input" formControlName="lastName">
+    </label>
+  </div>
+
+  <div  class="two-columns">
+    <label class="lycoris-form-label">
+      <span class="lycoris-form-label__text"> Пол </span>
+      <select class="lycoris-form-input" id="gender" formControlName="gender">
+        <option *ngFor="let gender of genders" [value]="gender.id">
+          {{ gender.name }}
+        </option>
+      </select>
+    </label>
+
+    <label class="lycoris-form-label">
+      <span class="lycoris-form-label__text"> Email </span>
+      <input type="text" class="lycoris-form-input" formControlName="email">
+    </label>
+  </div>
+
+  <div  class="two-columns">
+    <label class="lycoris-form-label">
+      <span class="lycoris-form-label__text"> Департамент </span>
+      <select class="lycoris-form-input" id="department" formControlName="department">
+        <option *ngFor="let dept of departments" [value]="dept.id">
+          {{ dept.name }}
+        </option>
+      </select>
+    </label>
+
+    <label class="lycoris-form-label">
+      <span class="lycoris-form-label__text"> Статус </span>
+      <select class="lycoris-form-input" id="status" formControlName="status">
+        <option *ngFor="let stat of statuses" [value]="stat.id">
+          {{ stat.name }}
+        </option>
+      </select>
+    </label>
+
+  </div>
+
+  <div>
+    <div>
+      <button class="btn" (click)="onSave()">Сохранить</button>
+      <div class="lycoris-form-label__text mt14" [hidden]="!errorSuccess"> Ошибка! </div>
+      <div class="lycoris-form-label__text mt14" [hidden]="!goodSuccess"> Успех! </div>
+    </div>
+  </div>
+
+</form>

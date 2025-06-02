@@ -1,0 +1,12 @@
+<img [src]="preview()" alt="" class="avatar">
+
+<div class="dropzone">
+  <div class="dropzone-info mt14">
+      <span class="dropzone-text" >Выберите изображение <10mb</span>
+  </div>
+  <input
+    class="avatar-input"
+    type="file"
+    (change)="fileBrowserHandler($event)"
+  >
+</div>

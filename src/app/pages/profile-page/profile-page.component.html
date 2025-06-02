@@ -1,1 +1,41 @@
-<p>profile-page works!</p>
+@if (profile$ | async; as profile$){
+  <header class="profile-page_header">
+    <app-profile-header
+      [profile]="profile$"
+    ></app-profile-header>
+
+    <a class="btn btn-shadow to-settings-btn" [routerLink]="['/settings']">
+      Редактировать
+      <svg icon="settings" class="to-settings-icon"></svg>
+    </a>
+
+  </header>
+
+  <main class="profile-page__body mt14">
+    <div class="profile-page__element"> Name:
+      <p class="profile-page__info ml14"> {{ profile$.firstName }}</p>
+    </div>
+    <div class="profile-page__element"> Lastname:
+      <p class="profile-page__info ml14"> {{ profile$.lastName }}</p>
+    </div>
+    <div class="profile-page__element"> Gender:
+      <p class="profile-page__info ml14"> {{ profile$.gender }}</p>
+    </div>
+    <div class="profile-page__element"> Email:
+      <p class="profile-page__info ml14"> {{ profile$.email }}</p>
+    </div>
+    <div class="profile-page__element"> Department:
+      <p class="profile-page__info ml14"> {{ profile$.department }}</p>
+    </div>
+    <div class="profile-page__element"> Status:
+      <p class="profile-page__info ml14"> {{ profile$.status }} </p>
+    </div>
+    <div  class="profile-page__element"> Groups:
+      @if (profile$.groups.length > 0) {
+        @for (group of profile$.groups; track group.name) {
+          <p class="profile-page__info ml14">{{ group.name }}</p>
+        }
+      }
+    </div>
+  </main>
+}

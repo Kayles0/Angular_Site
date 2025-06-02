@@ -85,8 +85,9 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
-                "glob": "**/*",
-                "input": "public"
+                "glob": "**/**",
+                "input": "public/**",
+                "output": "/svg/"
               }
             ],
             "styles": [
